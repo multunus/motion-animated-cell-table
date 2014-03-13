@@ -24,4 +24,35 @@ describe ScreenController do
     table.tableView.separatorStyle.should == UITableViewCellSeparatorStyleNone
   end
 
+  it "should set up the reverse animation button" do
+    button = @screen.set_up_reverse_animator_button
+    button.class.should == UIButton
+    button.backgroundColor.should == UIColor.blackColor
+  end
+
+  it "should create a reusable cell for the table" do
+    cell = @screen.create_reusable_cell 0, AnimatedCellTableViewController.name
+    cell.class.should == CustomCell
+  end
+
+  it "should show animation button" do
+    button = @screen.set_up_reverse_animator_button
+    @screen.instance_variable_set(:@button, button)
+    button.alpha = 0
+    @screen.show_reverse_animator_button
+    button.alpha.should == 1
+  end
+
+  it "should hide animation button" do
+    button = @screen.set_up_reverse_animator_button
+    @screen.instance_variable_set(:@button, button)
+    button.alpha = 1
+    @screen.hide_reverse_animator_button
+    button.alpha.should == 0
+  end
+
+  it "should populate sample data" do
+    @screen.populate_sample_data
+    @screen.items_list.count.should == 10
+  end
 end
