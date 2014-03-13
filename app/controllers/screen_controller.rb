@@ -24,6 +24,7 @@ class ScreenController < UIViewController
     table.tableView.frame = self.view.bounds
     table.delegate_controller = self
     table.tableView.backgroundColor = UIColor.clearColor
+    table.tableView.separatorStyle = UITableViewCellSeparatorStyleNone
     table
   end
 
@@ -43,7 +44,6 @@ class ScreenController < UIViewController
     self.view.addSubview(@duplicate_cell_view)
     self.view.bringSubviewToFront(@duplicate_cell_view)
     @table.hide_table_view(0.3)
-    show_reverse_animator_button
   end
 
   def create_reusable_cell index, reusable_identifier
@@ -66,7 +66,7 @@ class ScreenController < UIViewController
 
   def after_hide_table_view
     final_point = CGPointMake(0,0)
-    @animator.linear_animate(@duplicate_cell_view, to: final_point, duration: 0.3, completion: nil)
+    @animator.linear_animate(@duplicate_cell_view, to: final_point, duration: 0.3, completion: lambda{|completion| show_reverse_animator_button})
   end
  
   def show_reverse_animator_button
