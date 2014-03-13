@@ -33,7 +33,7 @@ There are a two things that you need to set up first:
 1. A table cell and its corresponding view (you can also use the default iOS cell)
 2. A duplicate view for the cell (the one that gets popped out)
 
-The table cell needs to implement a special method called ```set_up_duplicate_cell_view``` which accepts two parameters. The first is an instance of CGPoint that gives the x,y position of the cell on the screen and the second is an instance of CGSize that gives the dimensions of the cell. These two parameters can be used to construct the duplicate view and place it appropriately on the screen. Please refer to the sample app to get an exemplified version of this.
+The table cell needs to implement a special method called ```set_up_duplicate_cell_view``` which accepts two parameters. The first is an instance of ```CGPoint``` that gives the x,y position of the cell on the screen and the second is an instance of ```CGSize``` that gives the dimensions of the cell. These two parameters can be used to construct the duplicate view and place it appropriately on the screen. Please refer to the sample app to get an exemplified version of this.
 
 Let's call the table cell ```CustomCell```, its view ```CustomCellView``` and the duplicate view ```DuplicateCustomCellView```. Now, here's how you can use the library:
 
