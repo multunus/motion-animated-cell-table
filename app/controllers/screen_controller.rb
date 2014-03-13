@@ -80,7 +80,7 @@ class ScreenController < UIViewController
   def populate_sample_data
     self.items_list = []
     10.times do |n|
-      self.items_list << "http://lorempixel.com/320/60/abstract/#{n}"
+      self.items_list << "http://lorempixel.com/320/60/technics/#{n}"
     end
   end
 
