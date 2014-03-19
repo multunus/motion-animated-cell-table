@@ -5,7 +5,7 @@ iOS (RubyMotion) Animated Cell Table Controller
 
 This is a library that paves way for programmers to apply fancy animations on tapped cells. When a cell on a table is tapped, this library pops out the view of that cell. This view can be played around with as much as the imagination of the programmer lets him :). And there's more - there's a final means of wrapping it all up - placing the view back in its original slot! Check out the sample app to get a better picture. As always, hearty thanks to team [lorempixel](http://lorempixel.com/) for their super awesome placeholder images.
 
-![Sample Implementation](http://dl.dropboxusercontent.com/s/gbtm147szkgrd6b/animated_cell_sample.gif)
+![Sample Implementation](http://dl.dropboxusercontent.com/s/evvh8ieau7f03z9/animated-cell-sample.gif)
 
 ## Installation
 
